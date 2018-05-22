@@ -100,6 +100,7 @@
           },
           onslide: this.onSlideCustom,
           onslideend: function onslideend(index, slide) {
+            _this.$parent.$emit('updateIndex', index);
             return _this.$emit('onslideend', { index: index, slide: slide });
           },
           onslidecomplete: function onslidecomplete(index, slide) {
